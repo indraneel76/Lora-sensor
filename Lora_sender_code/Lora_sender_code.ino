@@ -5,6 +5,7 @@
 #define SS_PIN   10
 #define RST_PIN   9
 #define DIO0_PIN  2
+#define LED_PIN 11
 #include "DHT.h"
 
 // =========================
@@ -23,6 +24,7 @@ DHT dht(DHTPIN, DHTTYPE);
 int counter = 0;
 String message ;
 void setup() {
+  pinMode(LED_PIN ,OUTPUT);
   Serial.begin(9600);
   while (!Serial);
 
@@ -42,12 +44,12 @@ void setup() {
   // =========================
   // Long-range radio settings
   // =========================
-  LoRa.setSpreadingFactor(12);      // Max range
+ /* LoRa.setSpreadingFactor(12);      // Max range
   LoRa.setSignalBandwidth(125E3);   // 125 kHz
   LoRa.setCodingRate4(8);           // 4/8
   LoRa.setTxPower(17);              // Strong TX
   LoRa.enableCrc();                 // Better reliability
-
+*/
 
   Serial.println("LoRa initialized successfully!");
 }
@@ -77,11 +79,19 @@ void loop() {
   // Packet content
  // LoRa.print("Hello from Due - Packet ");
   LoRa.print(message);
-
+  blinkLead();
   // End and send packet
   LoRa.endPacket();
 
   counter++;
 
   delay(2000); // send every 2 seconds
+}
+
+void blinkLead()
+{
+  digitalWrite(LED_PIN,HIGH);
+  delay(1000);
+  digitalWrite(LED_PIN,LOW);
+  delay(1000);
 }

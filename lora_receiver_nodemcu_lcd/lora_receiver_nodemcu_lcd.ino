@@ -20,7 +20,7 @@ LiquidCrystal_I2C lcd(0x3F, 16, 2);
 #define LORA_FREQUENCY 433E6   // SX1278 usually 433 MHz
 int counter =0 ;
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   delay(1000);
 
   Serial.println("LoRa + LCD Receiver Starting...");
@@ -59,12 +59,13 @@ void setup() {
   // =========================
   // Long-range radio settings
   // =========================
+ /*
   LoRa.setSpreadingFactor(12);      // Max range
   LoRa.setSignalBandwidth(125E3);   // 125 kHz
   LoRa.setCodingRate4(8);           // 4/8
   LoRa.setTxPower(17);              // Strong TX
   LoRa.enableCrc();                 // Better reliability
-
+*/
 
   Serial.println("LoRa initialized successfully!");
 
