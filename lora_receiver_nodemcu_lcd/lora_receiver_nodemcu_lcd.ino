@@ -96,7 +96,7 @@ void loop() {
     Serial.println("--------------------------------");
     Serial.print("Received: ");
     Serial.println(incoming);
-    Serial.print("RSSI: ");
+     Serial.print("RSSI: ");
     Serial.print(rssi);
     Serial.println(" dBm");
     Serial.println("--------------------------------");

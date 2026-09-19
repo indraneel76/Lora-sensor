@@ -5,7 +5,7 @@
 #define SS_PIN   10
 #define RST_PIN   9
 #define DIO0_PIN  2
-#define LED_PIN 11
+#define LED_PIN 11 
 #include "DHT.h"
 
 // =========================
