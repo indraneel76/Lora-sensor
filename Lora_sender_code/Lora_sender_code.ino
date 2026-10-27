@@ -44,12 +44,12 @@ void setup() {
   // =========================
   // Long-range radio settings
   // =========================
- /* LoRa.setSpreadingFactor(12);      // Max range
-  LoRa.setSignalBandwidth(125E3);   // 125 kHz
-  LoRa.setCodingRate4(8);           // 4/8
-  LoRa.setTxPower(17);              // Strong TX
-  LoRa.enableCrc();                 // Better reliability
-*/
+  LoRa.setSpreadingFactor(12);
+  LoRa.setSignalBandwidth(125E3);
+  LoRa.setCodingRate4(8);
+  LoRa.setTxPower(17);
+  
+  LoRa.enableCrc();
 
   Serial.println("LoRa initialized successfully!");
 }
