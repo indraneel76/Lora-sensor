@@ -12,6 +12,9 @@ This has two arduino project
 
 **lora_sender_arduino_due** has the code for sending temperature and humidity over LORA(long range) capture from temperature /humidty sensor DHT11. This runs on Arduino Due and has to be open in arduino IDE with Arduino Due as the board.
 
+
+![devices](Device_pic.jpg)
+
 ## Ingredients / Component needed
  - Node MCU ESP8266
  - Mini breadboard - 2
