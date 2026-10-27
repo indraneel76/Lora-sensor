@@ -22,7 +22,10 @@ This has two arduino project
  - LED 
  - Arduino Due
 
- 
 
 
+## Connection diagram
+You need fritzing to see the diagram [Fritzing](https://fritzing.org/)
+ - Sender connection diagram : Lora_sender_nodemcu.fzz 
+- Receiver connection diagram: Lora_sender_Arduinodue.fzz
 
